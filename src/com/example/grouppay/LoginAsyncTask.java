@@ -19,10 +19,11 @@ public class LoginAsyncTask extends AsyncTask<String, Integer, String> {
 
 	private Context context;
 	private ProgressBar loginProgressBar;
+	private static final String localIP = "192.168.0.12";
 	
 	private static final int USERNAME = 0;
 	private static final int PASSWORD = 1;
-	private static final String LOGIN_PAGE = "http://192.168.0.12/post_test.php";
+	private static final String LOGIN_PAGE = "http://" + localIP + "/post_test.php";
 	private static final String JSONSTRING_KEY = "JSONString";
 	
 	public LoginAsyncTask(Context context, JSONObject reader, ProgressBar loginProgressBar) {
